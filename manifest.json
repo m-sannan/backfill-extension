@@ -1,0 +1,38 @@
+{
+  "manifest_version": 3,
+  "name": "Backfill \u2014 Sync Cliq Calls to Calendar",
+  "version": "2.2.0",
+  "description": "Backfill your Google Calendar with what actually happened \u2014 scans your Zoho Cliq call history and syncs the time blocks.",
+  "permissions": [
+    "storage",
+    "identity",
+    "tabs"
+  ],
+  "host_permissions": [
+    "https://cliq.zoho.in/*",
+    "https://www.googleapis.com/*"
+  ],
+  "background": {
+    "service_worker": "src/background.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://cliq.zoho.in/*"
+      ],
+      "js": [
+        "src/content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_title": "Open Backfill"
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}

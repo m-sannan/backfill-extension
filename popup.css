@@ -1,0 +1,65 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { min-height: 100vh; background: #EDE8FB; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; color: #1E1B33; font-size: 14px; }
+
+.wrap { max-width: 760px; margin: 0 auto; padding: 40px 24px 80px; display: flex; flex-direction: column; gap: 18px; }
+
+.brand { display: flex; align-items: center; gap: 14px; padding: 8px 4px 6px; }
+.brand-icon { font-size: 34px; }
+.brand-name { font-weight: 800; font-size: 22px; letter-spacing: -0.01em; }
+.brand-sub { font-size: 13px; color: #6E6B80; margin-top: 2px; }
+
+.card { background: #fff; border-radius: 18px; padding: 24px 26px; box-shadow: 0 4px 24px rgba(108,59,212,0.08); }
+
+label { font-size: 11px; font-weight: 700; color: #6E6B80; text-transform: uppercase; letter-spacing: .05em; display: block; margin-bottom: 8px; }
+input[type="date"] { flex: 1; padding: 10px 12px; border: 1.5px solid #DDD5F8; border-radius: 10px; font-size: 14px; font-family: inherit; }
+.row { display: flex; gap: 10px; margin-bottom: 10px; align-items: center; }
+
+button { font-family: inherit; cursor: pointer; border: none; border-radius: 999px; font-weight: 700; transition: opacity .15s, transform .1s; }
+button:active { transform: scale(.98); }
+.btn-primary { background: #6C3BD4; color: #fff; padding: 13px 26px; font-size: 14px; box-shadow: 0 4px 16px rgba(108,59,212,0.3); }
+.btn-primary:disabled { background: #DDD5F8; cursor: not-allowed; box-shadow: none; }
+.btn-secondary { background: #EDE8FB; color: #6C3BD4; padding: 12px 22px; font-size: 13px; }
+.btn-ghost { background: none; color: #6C3BD4; border: 1.5px solid #DDD5F8; padding: 9px 18px; font-size: 12px; }
+.btn-tiny { background: #EDE8FB; color: #6C3BD4; padding: 7px 16px; font-size: 12px; }
+.btn-tiny.danger { background: #FCE8F2; color: #E5006D; }
+.full { width: 100%; margin-top: 6px; }
+
+.stat-row { display: flex; gap: 14px; }
+.stat { flex: 1; text-align: center; background: #F7F4FE; border-radius: 14px; padding: 16px 8px; }
+.stat .n { font-size: 26px; font-weight: 800; letter-spacing: -0.02em; }
+.stat .l { font-size: 10px; color: #6E6B80; text-transform: uppercase; letter-spacing: .04em; margin-top: 4px; }
+
+.status { font-size: 13px; margin-top: 10px; color: #6E6B80; }
+.status.ok { color: #1D9E75; font-weight: 600; }
+.status.err { color: #E5006D; font-weight: 600; }
+.status.warn { color: #B45309; font-weight: 600; }
+
+.day-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(80px, 1fr)); gap: 10px; margin-bottom: 16px; }
+.day-box { border: 1.5px solid #DDD5F8; border-radius: 14px; padding: 14px 6px; text-align: center; cursor: pointer; font-size: 12px; background: #fff; transition: background .15s, border-color .15s; }
+.day-box:hover { background: #FAF8FF; }
+.day-box.selected { background: #F2ECFD; border-color: #6C3BD4; }
+.day-box .dd { font-size: 20px; font-weight: 800; margin: 4px 0; }
+.day-box .cnt { font-size: 11px; color: #6E6B80; }
+
+.progress-track { height: 8px; background: #EDE8FB; border-radius: 999px; overflow: hidden; margin-bottom: 12px; }
+.progress-fill { height: 100%; background: linear-gradient(90deg, #6C3BD4, #9B6EF0); width: 0%; transition: width .2s; }
+
+.log { max-height: 340px; overflow-y: auto; font-size: 12px; margin-top: 12px; border-top: 1px solid #F0ECFC; }
+.log-row { display: flex; gap: 10px; padding: 8px 4px; border-bottom: 1px solid #F7F4FE; align-items: center; }
+.log-row .badge { font-weight: 700; width: 42px; flex-shrink: 0; font-size: 11px; border-radius: 999px; padding: 2px 0; text-align: center; }
+.log-row .badge.ok { color: #1D9E75; background: #E2F4EC; }
+.log-row .badge.skip { color: #6E6B80; background: #F0EEF5; }
+.log-row .badge.fail { color: #E5006D; background: #FCE8F2; }
+
+.footer-actions { display: flex; gap: 10px; justify-content: center; padding-top: 4px; }
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-thumb { background: #DDD5F8; border-radius: 99px; }
+
+/* v2 additions: settings fields + selects */
+.select { padding: 10px 12px; border: 1.5px solid #DDD5F8; border-radius: 10px; font-family: inherit; font-size: 14px; margin-bottom: 10px; }
+.field { flex: 1; display: flex; flex-direction: column; gap: 4px; }
+.field-label { font-size: 12px; color: #6B6B7B; }
+.field input[type="number"] { padding: 8px 10px; border: 1.5px solid #DDD5F8; border-radius: 10px; font-family: inherit; font-size: 14px; width: 100%; box-sizing: border-box; }
+.checkbox-field { justify-content: flex-end; }
+.inline { display: flex; align-items: center; gap: 6px; font-size: 13px; }

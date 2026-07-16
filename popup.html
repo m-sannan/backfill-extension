@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Backfill</title>
+<link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="wrap">
+    <div class="brand">
+      <div class="brand-icon">📞</div>
+      <div>
+        <div class="brand-name">Backfill</div>
+        <div class="brand-sub" id="tabStatus">Checking for Cliq tab…</div>
+      </div>
+    </div>
+
+    <div class="card" id="authCard">
+      <button id="btnConnect" class="btn-primary">Connect Google Calendar</button>
+      <div id="authStatus" class="status"></div>
+      <label>Target calendar</label>
+      <select id="calendarPicker" class="full select">
+        <option value="primary">Primary</option>
+      </select>
+    </div>
+
+    <div class="card">
+      <div class="stat-row">
+        <div class="stat"><div class="n" id="statCalls">0</div><div class="l">API calls</div></div>
+        <div class="stat"><div class="n" id="statLedger">0</div><div class="l">synced total</div></div>
+        <div class="stat"><div class="n" id="statPending">0</div><div class="l">pending</div></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <label>Range</label>
+      <div class="row">
+        <input type="date" id="startDate">
+        <input type="date" id="endDate">
+      </div>
+      <label>Event color</label>
+      <select id="colorPicker" class="full select">
+        <option value="9">🔵 Blueberry</option>
+        <option value="3">🟣 Grape</option>
+        <option value="7">🟦 Peacock</option>
+        <option value="11">🔴 Tomato</option>
+        <option value="6">🟠 Tangerine</option>
+        <option value="10">🟢 Basil</option>
+        <option value="5">🟡 Banana</option>
+        <option value="1">🪻 Lavender</option>
+        <option value="2">🟩 Sage</option>
+        <option value="4">🩷 Flamingo</option>
+        <option value="8">⚫ Graphite</option>
+        <option value="">Default (no color)</option>
+      </select>
+      <button id="btnScrape" class="btn-secondary full">Scan Cliq for this range</button>
+      <div id="scrapeStatus" class="status"></div>
+    </div>
+
+    <div class="card" id="weekGrid" style="display:none;">
+      <div class="day-grid" id="dayGrid"></div>
+      <button id="btnSync" class="btn-primary full">Sync selected days</button>
+      <button id="btnExportCsv" class="btn-ghost full">Export scan as CSV</button>
+    </div>
+
+    <div class="card" id="progressCard" style="display:none;">
+      <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+      <div id="syncStatus" class="status"></div>
+      <div class="row">
+        <button id="btnPause" class="btn-tiny">Pause</button>
+        <button id="btnResume" class="btn-tiny" disabled>Resume</button>
+        <button id="btnStop" class="btn-tiny danger">Stop</button>
+      </div>
+      <div id="log" class="log"></div>
+    </div>
+
+    <div class="card">
+      <label>Settings</label>
+      <div class="row">
+        <div class="field">
+          <span class="field-label">Min duration (min)</span>
+          <input type="number" id="setMinDuration" min="0" max="60">
+        </div>
+        <div class="field">
+          <span class="field-label">Round to (min)</span>
+          <input type="number" id="setRoundTo" min="1" max="30">
+        </div>
+      </div>
+      <div class="row">
+        <div class="field">
+          <span class="field-label">Sync delay (ms)</span>
+          <input type="number" id="setDelayMs" min="300" max="10000" step="100">
+        </div>
+        <div class="field checkbox-field">
+          <label class="inline"><input type="checkbox" id="setWeekends"> Include weekends</label>
+        </div>
+      </div>
+      <div id="settingsStatus" class="status"></div>
+    </div>
+
+    <div class="card">
+      <div class="footer-actions">
+        <button id="btnExport" class="btn-ghost">Export ledger backup</button>
+        <button id="btnImport" class="btn-ghost">Import ledger backup</button>
+      </div>
+      <input type="file" id="fileImport" accept="application/json" style="display:none;">
+    </div>
+  </div>
+  <script type="module" src="popup.js"></script>
+</body>
+</html>

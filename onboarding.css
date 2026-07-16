@@ -1,0 +1,18 @@
+/* onboarding.css — layered on top of popup.css */
+.ob-wrap { max-width: 520px; margin: 0 auto; padding-top: 24px; }
+.ob-step-head { display: flex; gap: 14px; align-items: flex-start; margin-bottom: 12px; }
+.ob-num {
+  width: 30px; height: 30px; flex: 0 0 30px;
+  border-radius: 50%;
+  background: #EDE8FC; color: #5B3DF5;
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 700; font-size: 14px;
+}
+.ob-num.done { background: #DCF5E7; color: #14804A; }
+.ob-title { font-weight: 700; font-size: 15px; margin-bottom: 2px; }
+.ob-desc { font-size: 13px; color: #6B6B7B; line-height: 1.45; }
+.ob-footer {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 4px 6px 24px; font-size: 13px; color: #6B6B7B;
+}
+.ob-footer a { color: #5B3DF5; text-decoration: none; }

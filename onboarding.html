@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Welcome — Backfill</title>
+<link rel="stylesheet" href="popup.css">
+<link rel="stylesheet" href="onboarding.css">
+</head>
+<body>
+  <div class="wrap ob-wrap">
+    <div class="brand">
+      <div class="brand-icon">📞</div>
+      <div>
+        <div class="brand-name">Welcome to Backfill</div>
+        <div class="brand-sub">3 quick steps and you're set up</div>
+      </div>
+    </div>
+
+    <!-- Step 1: Cliq -->
+    <div class="card ob-step" id="step1">
+      <div class="ob-step-head">
+        <div class="ob-num" id="num1">1</div>
+        <div>
+          <div class="ob-title">Open Zoho Cliq</div>
+          <div class="ob-desc">The extension reads your call history from an open, logged-in Cliq tab. It never sees your Zoho password.</div>
+        </div>
+      </div>
+      <button id="btnOpenCliq" class="btn-secondary full">Open cliq.zoho.in</button>
+      <div id="cliqStatus" class="status">Waiting for a Cliq tab…</div>
+    </div>
+
+    <!-- Step 2: Calendar -->
+    <div class="card ob-step" id="step2">
+      <div class="ob-step-head">
+        <div class="ob-num" id="num2">2</div>
+        <div>
+          <div class="ob-title">Connect Google Calendar</div>
+          <div class="ob-desc">Grants permission to create events and list your calendars. Your data goes directly from your browser to Google — no third-party server.</div>
+        </div>
+      </div>
+      <button id="btnConnect" class="btn-primary full">Connect Google Calendar</button>
+      <div id="authStatus" class="status"></div>
+    </div>
+
+    <!-- Step 3: First scan -->
+    <div class="card ob-step" id="step3">
+      <div class="ob-step-head">
+        <div class="ob-num" id="num3">3</div>
+        <div>
+          <div class="ob-title">Run your first scan</div>
+          <div class="ob-desc">Open the logger, pick a date range (last 7 days is pre-filled), hit <b>Scan</b>, then <b>Sync selected days</b>. A ledger prevents duplicates — re-running is always safe.</div>
+        </div>
+      </div>
+      <button id="btnOpenLogger" class="btn-primary full" disabled>Open the logger</button>
+      <div class="status" id="step3Status">Complete steps 1 &amp; 2 first</div>
+    </div>
+
+    <div class="ob-footer">
+      <label class="inline"><input type="checkbox" id="skipOnboarding"> Don't show this again</label>
+      <a href="#" id="linkSkip">Skip setup</a>
+    </div>
+  </div>
+  <script type="module" src="onboarding.js"></script>
+</body>
+</html>
