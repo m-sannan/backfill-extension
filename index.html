@@ -7,7 +7,8 @@
 <meta name="google-site-verification" content="4Pi8PUicAjm7F85mcN3fowB9sECdV5pmnMJtqoQJO4g" />
 <style>
   body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; max-width: 640px; margin: 80px auto; padding: 0 24px; color: #1a1a1a; line-height: 1.6; }
-  h1 { font-size: 28px; }
+  h1 { font-size: 32px; margin-bottom: 4px; }
+  .tagline { font-size: 18px; color: #444; margin-bottom: 8px; }
   .sub { color: #666; margin-bottom: 32px; }
   a.btn { display: inline-block; background: #5B3DF5; color: white; padding: 10px 20px; border-radius: 8px; text-decoration: none; margin-right: 12px; }
   ul { padding-left: 20px; }
@@ -16,23 +17,24 @@
 </head>
 <body>
   <h1>Backfill</h1>
-  <p class="sub">Sync your Zoho Cliq calls to Google Calendar — automatically.</p>
+  <p class="tagline">A Chrome extension that syncs your Zoho Cliq calls to Google Calendar.</p>
+  <p class="sub">Backfill automatically scans your Zoho Cliq call and meeting history for any date range you choose, and creates matching events on your Google Calendar — so your actual call time shows up on your calendar and nothing gets missed.</p>
 
-  <p>Backfill is a Chrome extension that scans your Zoho Cliq call and meeting history for any date range, and syncs matching time blocks to Google Calendar — so your actual call time shows up on your calendar and nothing gets missed.</p>
-
+  <h2>What Backfill does</h2>
   <ul>
-    <li>Scans Direct Calls and Meetings</li>
-    <li>Sync to any writable Google Calendar</li>
-    <li>Duplicate-safe — re-running is always safe</li>
-    <li>CSV export of any scan</li>
+    <li>Scans your Zoho Cliq Direct Calls and Meetings history for a date range you pick</li>
+    <li>Creates calendar events for each call, with the correct time and duration</li>
+    <li>Syncs to any Google Calendar you choose to write to</li>
+    <li>Tracks what's already been synced locally, so re-running never creates duplicates</li>
+    <li>Lets you export any scan as a CSV file</li>
   </ul>
 
   <p>
-    <a class="btn" href="https://github.com/m-sannan/backfill-extension">View on GitHub</a>
+    <a class="btn" href="https://github.com/m-sannan/backfill-extension">View source on GitHub</a>
   </p>
 
   <footer>
-    <a href="https://github.com/m-sannan/backfill-extension/blob/main/PRIVACY.md">Privacy Policy</a> ·
+    <a href="./privacy.html">Privacy Policy</a> ·
     <a href="https://github.com/m-sannan/backfill-extension/blob/main/TERMS.md">Terms of Service</a>
   </footer>
 </body>

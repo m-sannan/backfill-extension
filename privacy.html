@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Privacy Policy — Backfill</title>
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; max-width: 680px; margin: 60px auto; padding: 0 24px; color: #1a1a1a; line-height: 1.65; }
+  h1 { font-size: 26px; margin-bottom: 4px; }
+  .updated { color: #888; font-size: 13px; margin-bottom: 32px; }
+  h2 { font-size: 18px; margin-top: 32px; }
+  table { border-collapse: collapse; width: 100%; margin: 16px 0; }
+  th, td { border: 1px solid #ddd; padding: 8px 12px; text-align: left; font-size: 14px; }
+  th { background: #f5f5f7; }
+  a { color: #5B3DF5; }
+  footer { margin-top: 48px; font-size: 13px; color: #888; }
+</style>
+</head>
+<body>
+  <h1>Privacy Policy — Backfill</h1>
+  <p class="updated">Last updated: July 2026</p>
+
+  <p><strong>Backfill does not collect, transmit, sell, or share your data with anyone.</strong> There is no backend server and no analytics.</p>
+
+  <h2>What the extension accesses</h2>
+  <ul>
+    <li><strong>Zoho Cliq call history (read-only)</strong>: names/titles, times, and durations of your calls and meetings, read from the Cliq page you already have open. Your Zoho credentials are never seen or stored.</li>
+    <li><strong>Google Calendar (write + list)</strong>: used solely to create calendar events you explicitly choose to sync, and to list your calendars for the target-calendar picker.</li>
+  </ul>
+
+  <h2>Where data is stored</h2>
+  <p>Locally in your browser only (<code>chrome.storage.local</code> / <code>chrome.storage.sync</code>):</p>
+  <ul>
+    <li>A sync ledger (which entries were already synced) to prevent duplicates</li>
+    <li>Your settings (duration filters, delay, calendar choice, color)</li>
+    <li>A short-lived Google OAuth access token (~1 hour)</li>
+  </ul>
+  <p>Nothing is sent anywhere except directly from your browser to Google's Calendar API when you click Sync.</p>
+
+  <h2>What we do NOT do</h2>
+  <ul>
+    <li>No analytics, tracking, or telemetry</li>
+    <li>No third-party servers</li>
+    <li>No sale or transfer of data</li>
+    <li>No use of data for advertising or credit purposes</li>
+  </ul>
+
+  <h2>Permissions justification</h2>
+  <table>
+    <tr><th>Permission</th><th>Why</th></tr>
+    <tr><td><code>storage</code></td><td>Settings + sync ledger, stored locally</td></tr>
+    <tr><td><code>identity</code></td><td>Google sign-in via <code>launchWebAuthFlow</code></td></tr>
+    <tr><td><code>tabs</code></td><td>Detect the open Cliq tab and navigate it during a scan</td></tr>
+    <tr><td><code>cliq.zoho.in</code> host</td><td>Read your call history from the page</td></tr>
+    <tr><td><code>googleapis.com</code> host</td><td>Create calendar events</td></tr>
+  </table>
+
+  <h2>Data removal</h2>
+  <p>Uninstalling the extension deletes all locally stored data. You can also revoke calendar access anytime at <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>.</p>
+
+  <h2>Contact</h2>
+  <p>Open an issue on the <a href="https://github.com/m-sannan/backfill-extension">GitHub repository</a>.</p>
+
+  <footer><a href="./">← Back to Backfill</a></footer>
+</body>
+</html>
